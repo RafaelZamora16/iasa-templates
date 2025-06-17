@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: Arial;
 }
 
 body {
@@ -16,18 +17,14 @@ body {
 .header {
     width: 100%;
     min-height: 160px;
-    border: 1px solid red;
-
     background-color: #fcd62a;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .header__logo {
-    border: 2px solid red;
-
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -37,9 +34,6 @@ body {
 }
 
 .header__title {
-
-    border: 1px solid blue;
-
     flex: 1;
     height: 100%;
 
@@ -52,12 +46,16 @@ body {
 
 .header__title h1 {
     font-size: 45px;
+    font-weight: 500;
+}
+
+.image_pio{
+    border: 1px solid red;
 }
 
 /* MAIN */
 
 .main {
-    border: 1px solid green;
     display: flex;
     justify-content: center;
 
@@ -69,8 +67,8 @@ body {
 }
 
 .date-info {
+    border: 1px solid red;
     width: 100%;
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -120,9 +118,9 @@ body {
 
 
 .addresee {
-    padding: 10px;
-    border: 1px solid red;
-    
+    border: 1px solid blue;
+    margin-top: 5px;
+    padding: 6px;    
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -131,5 +129,56 @@ body {
 }
 
 .message {
-    border: 1px solid blue;
+    border: 1px solid red;
+    margin: 40px 0;
+}
+
+.tbl-products{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tbl-totals{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table {
+  /* border: 2px solid blue; */
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td.col-ancha, th.col-ancha {
+      width: 60%;
+      border: 1px solid black;
+    }
+
+td.col-estrecha, th.col-estrecha{
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;    
+}
+
+.title{
+    font-weight: 900;
+}
+
+.title_italic{
+    font-style: italic;
+}
+
+.manager_signature{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.asignature__line {
+   background-color: black;
+    width: 200px;
+    height: 0.5px;
 }
