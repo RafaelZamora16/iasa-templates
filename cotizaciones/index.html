@@ -3,7 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <title>PDF pedido</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(0, 200px) 1fr minmax(0, 75px);
+    height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 160px;
+    background-color: #fcd62a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    max-width: 150px;
+}
+
+.header__title {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    padding: 25px 30px;
+}
+
+.header__title h1 {
+    font-size: 45px;
+    font-weight: 500;
+}
+/*
+.image_pio{
+    border: 1px solid red;
+}*/
+
+/* MAIN */
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.container {
+    width: 1080px;
+}
+
+.date-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* FOOTER */
+
+.footer {
+    width: 100%;
+    height: 100%;
+
+    padding: 12px 10px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.text--large {
+    font-size: 18px;
+}
+
+.text--medium {
+    font-size: 16px;
+}
+
+.text--normal,
+.text--body {
+    font-size: 14px;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+
+.addresee {
+    margin-top: 5px;
+    padding: 6px;    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.message {
+    margin: 40px 0;
+}
+
+.tbl-products{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tbl-totals{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td.col-ancha, th.col-ancha {
+      width: 60%;
+      border: 1px solid black;
+      padding: 3px;
+    }
+
+td.col-estrecha, th.col-estrecha{
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;  
+    padding: 3px;  
+}
+
+.title{
+    font-weight: 700;
+}
+
+.title_italic{
+    font-style: italic;
+}
+
+.manager_signature{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+}
+
+.asignature__line {
+   background-color: black;
+    width: 200px;
+    height: 0.5px;
+}
+    </style>
 </head>
 
 <body>
