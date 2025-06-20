@@ -44,9 +44,9 @@
 
         header {
             width: 100%;
-            min-height: 150px;
+            min-height: 100px;
             padding: 0 20px;
-            /*            border: 1px solid red;*/
+            /*          border: 1px solid red;*/
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -55,12 +55,12 @@
         }
 
         .header__title {
-            font-size: 30px;
+            font-size: 35px;
             font-weight: 700;
         }
 
         .header__data {
-            width: 50%;
+            width: 81%;
             height: auto;
             align-self: flex-end;
             /*            border: 1px solid blue;*/
@@ -114,6 +114,7 @@
             padding: 5px;
         }
 
+        /*
         .table__prueba {
             border-collapse: collapse;
             width: 100%;
@@ -137,9 +138,10 @@
             text-align: left;
             padding: 0px 15px;
             border: 1px solid blue;
-        }
+        }*/
 
-        .th_none {
+        .th_none,
+        .td_none {
             border: none;
         }
 
@@ -147,9 +149,9 @@
             padding: 8px;
         }
 
-        .td_none {
+        /* .td_none {
             border: none;
-        }
+        }*/
 
         .th_table__prueba {
             margin: 2px;
@@ -157,9 +159,9 @@
         }
 
         footer {
-            /*          border: 1px solid orange;*/
+            /*border: 1px solid orange;*/
             position: static;
-            /*          position: fixed;*/
+            /*position: fixed;*/
             bottom: 0 !important;
             width: 100%;
             margin-bottom: 100px;
@@ -182,19 +184,59 @@
                 bottom: 0 !important;
             }
         }
+
+        .main__address {
+            display: flex;
+            height: 150px;
+            /*        border: 1px solid red;*/
+
+        }
+
+        .prueba {
+            /*          border: 1px solid blue;*/
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .address {
+            /*          border: 1px solid green;*/
+            height: 100%;
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
     <header class="header__content">
         <h1 class="header__title">IMPULSORA AVIPECUARIA</h1>
-        <div class="header__data">
-            <p><span class="text--bold">R.F.C:</span>Resultado</p>
-            <p><span class="text--bold">Pedido No. :</span>Resultado</p>
-        </div>
+
     </header>
     <main class="main__content">
-        <table class="table__prueba">
+
+        <div class="main__address">
+            <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="" width=""
+                height="140px">
+            <div class="prueba">
+
+                <div class="address">
+                    <div class="header__data">
+                        <p><span class="text--bold">R.F.C:</span>Resultado</p>
+                        <p><span class="text--bold">Pedido No. :</span>Resultado</p>
+                    </div>
+                    <p class="text--body text--bold th_table__prueba">Domiciolio fiscal: </p>
+                    <p class="text--body th_table__prueba"></p>
+                    <p class="text--body text--bold th_table__prueba">Lugar de expedición: </p>
+                    <p class="text--body th_table__prueba"></p>
+                </div>
+            </div>
+        </div>
+        <!-- <table class="table__prueba">
             <tr>
                 <th class="th__prueba_sup"><img
                         src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt=""
@@ -206,12 +248,7 @@
                     <p class="text--body th_table__prueba"></p>
                 </th>
             </tr>
-        </table>
-        <!--<div class="content">
-        <img class="image__logo" src="" alt="">
-            <p class="text--body text--bold">Domiciolio fiscal: </p>
-            <p class="text--body text--bold">Lugar de expedición: </p>
-        </div>-->
+        </table> -->
         <p class="text--body text--bold">Cliente: ( ) </p>
         <p class="text--body text--bold">RFC: </p>
         <div class="content_inf">
