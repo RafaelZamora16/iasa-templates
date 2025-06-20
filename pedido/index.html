@@ -3,76 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <title>PDF pedido</title>
-    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-family: Arial;
+        }
+
+        .text--body {
+            margin: 25px 0px;
+            /*            border: 1px solid blue;*/
+        }
+
+        .text--bold {
+            font-weight: bold;
+        }
+
+        body {
+            height: 100vh;
+            /*            border: 1px solid red;*/
+        }
+
+        /* CODIGO INICIAL
+        header {
+            width: 100%;
+            min-height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
+
+        .header__data{
+            width: 60%;
+            border: 1px solid red;
+            align-self: flex-end;
+        }*/
+
+        header {
+            width: 100%;
+            min-height: 150px;
+            padding: 0 20px;
+            /*            border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header__title {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .header__data {
+            width: 50%;
+            height: auto;
+            align-self: flex-end;
+            /*            border: 1px solid blue;*/
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 140px;
+        }
+
+        .image__logo {
+            background-color: blue;
+            width: 350px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex;
+            /*            border: 1px solid red;*/
+            padding: 0px 10px;
+        }
+
+        .content_inf {
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            /*            border: 1px solid orange;*/
+        }
+
+        main {
+            /*          border: 1px solid green;*/
+            margin: 0px 50px;
+            height: 800px;
+        }
+
+        .tbl_products {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+        }
+
+        th {
+            padding: 5px;
+        }
+
+        .table__prueba {
+            border-collapse: collapse;
+            width: 100%;
+            border: 1px solid green;
+        }
+
+        .th__prueba_sup {
+            align-items: center;
+            height: 120px;
+            width: 25%;
+            border: 1px solid red;
+        }
+
+        .th__prueba {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: none;
+            height: 120px;
+            width: 100%;
+            text-align: left;
+            padding: 0px 15px;
+            border: 1px solid blue;
+        }
+
+        .th_none {
+            border: none;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        .td_none {
+            border: none;
+        }
+
+        .th_table__prueba {
+            margin: 2px;
+            padding: 0px
+        }
+
+        footer {
+            /*          border: 1px solid orange;*/
+            position: static;
+            /*          position: fixed;*/
+            bottom: 0 !important;
+            width: 100%;
+            margin-bottom: 100px;
+            /*Revisar*/
+        }
+
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0px 50px 20px 0px;
+        }
+
+        @media query {
+
+            footer,
+            .footer__content {
+                position: fixed !important;
+                bottom: 0 !important;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header__content">
         <h1 class="header__title">IMPULSORA AVIPECUARIA</h1>
-        <!-- <div class="">
-            <img alt="Logo" src="https://acortar.link/A2VaH5" width="90 px" height="130 px">
-            <span>IMPULSORA</span><br>
-            <span>AVIPECUARIA</span><br>
-            <span>Excelencia en Salud Animal</span>
-        </div> -->
         <div class="header__data">
-            <p><span class="data-property">R.F.C:</span>IAV920729KN1</p>
-            <p><span class="data-property">Pedido No. :</span>2</p>
+            <p><span class="text--bold">R.F.C:</span>Resultado</p>
+            <p><span class="text--bold">Pedido No. :</span>Resultado</p>
         </div>
     </header>
-    <p><b>Domiciolio fiscal:</b></p>
-    <p><b>Lugar de expedición:</b></p>
-    <p><b>Cliente: ( ) </b></p>
-    <p><b>RFC:</b></p>
-    <p><b>Vendedor:</b></p>
-    <p><b>Su pedido</b></p>
-    <table class="T_Productos">
-        <thead>
+    <main class="main__content">
+        <table class="table__prueba">
             <tr>
-                <th>Cantidad</th>
-                <th>Clave</th>
-                <th>Descripción</th>
-                <th>% Desc</th>
-                <th>P/U</th>
-                <th>Importe</th>
+                <th class="th__prueba_sup"><img
+                        src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt=""
+                        width="100%" height="110px"></th>
+                <th class="th__prueba">
+                    <p class="text--body text--bold th_table__prueba">Domiciolio fiscal: </p>
+                    <p class="text--body th_table__prueba"></p>
+                    <p class="text--body text--bold th_table__prueba">Lugar de expedición: </p>
+                    <p class="text--body th_table__prueba"></p>
+                </th>
             </tr>
-        </thead>
-        <tbody>
-            <p>Condición para traer los productos</p>
+        </table>
+        <!--<div class="content">
+        <img class="image__logo" src="" alt="">
+            <p class="text--body text--bold">Domiciolio fiscal: </p>
+            <p class="text--body text--bold">Lugar de expedición: </p>
+        </div>-->
+        <p class="text--body text--bold">Cliente: ( ) </p>
+        <p class="text--body text--bold">RFC: </p>
+        <div class="content_inf">
+            <p class="text--body text--bold">Vendedor:</p>
+            <p class="text--body text--bold">Su pedido: </p>
+        </div>
+        <p class="text--body text--bold">Enviar a: </p>
+        <p class="text--body text--bold">Destino: </p>
+        <table class="tbl_products">
+            <thead>
                 <tr>
-                    <td>Resul cantidad</td>
-                    <td>Resul Clave</td>
-                    <td>Resul descripción</td>
-                    <td>Resul %Des</td>
-                    <td>Resul P/U</td>
-                    <td>Resul Importe</td>
+                    <th class="th__title">Cantidad</th>
+                    <th class="th__title">Clave</th>
+                    <th class="th__title">Descripción</th>
+                    <th class="th__title">% Desc</th>
+                    <th class="th__title">P/U</th>
+                    <th class="th__title">Importe</th>
                 </tr>
-        </tbody>
-    </table>
-    <table class="T_Totales">
-        <tbody>
-            <tr>
-                <th><b>Subtotal</b></th>
-                <th>Aqui va resultado</th>
-            </tr>
-            <tr>
-                <th><b>Descuento</b></th>
-                <th>Aqui va resultado</th>
-            </tr>
-            <tr>
-                <th><b>I.E.P.S.</b></th>
-                <th>Aqui va resultado</th>
-            </tr>
-            <tr>
-                <th><b>I.V.A.</b></th>
-                <th>Aqui va resultado</th>
-            </tr>
-            <tr>
-                <th><b>Total</b></th>
-                <th>Aqui va resultado</th>
-            </tr>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer class="footer__content">
+        <table class="tbl_totals">
+            <tbody>
+                <tr>
+                    <th class="th_none">Subtotal</th>
+                    <td class="td_none">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none">Descuento</th>
+                    <td class="td_none">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none">I.E.P.S.</th>
+                    <td class="td_none">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none">I.V.A.</th>
+                    <td class="td_none">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none">Total</th>
+                    <td class="td_none">Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text--bold">Referencia</p>
+    </footer>
+
 </body>
 
 </html>

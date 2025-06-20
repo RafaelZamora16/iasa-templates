@@ -12,11 +12,12 @@
     font-family: Arial;
 }
 
+/*
 body {
     display: grid;
     grid-template-rows: minmax(0, 200px) 1fr minmax(0, 75px);
     height: 100vh;
-}
+}*/
 
 /* HEADER */
 
@@ -154,7 +155,7 @@ table {
 }
 
 td.col-ancha, th.col-ancha {
-      width: 60%;
+      width: 40%;
       border: 1px solid black;
       padding: 3px;
     }
@@ -164,6 +165,10 @@ td.col-estrecha, th.col-estrecha{
     border: 1px solid black;
     text-align: center;  
     padding: 3px;  
+}
+
+.col_uniq {
+    width: 60%;
 }
 
 .title{
@@ -179,9 +184,20 @@ td.col-estrecha, th.col-estrecha{
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 80px;
+    height: 130px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
+
+}
+
+.image_asignature{
+
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .asignature__line {
@@ -241,6 +257,7 @@ td.col-estrecha, th.col-estrecha{
             <table class="tbl-products">
                 <thead>
                     <tr>
+                        <th class="col-estrecha text--body">Cantidad</th>
                         <th class="col-ancha text--body"> Producto</th>
                         <th class="col-estrecha text--body">Presentación</th>
                         <th class="col-estrecha text--body">Precio 2025</th>
@@ -248,29 +265,30 @@ td.col-estrecha, th.col-estrecha{
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="col-estrecha">Cantidad prod</td>
                         <td class="col-ancha text--body">producto cot</td>
                         <td class="col-estrecha title_italic text--body">presentación de producto</td>
-                        <td class="col-estrecha text--body">precio + IVA</td>
+                        <td class="col-estrecha text--body">precio + IVA</td> <!--&lt;&lt;IF: ([ID Detalle].[IVA trasladado] > 0)&gt;&gt; + IVA &lt;&lt;EndIF&gt;&gt; función de PDFCotización--> 
                     </tr>
                 </tbody>
             </table>
             <table class="tbl-totals">
                 <tr>
-                    <td class="col-ancha firs_column text--body" rowspan="4"></td>
-                    <td class="col-estrecha title_italic text--body">Piezas solicitadas</td>
-                    <th class="col-estrecha title_italic text--body">Resultado</th>
+                    <td class="text--body col_uniq" rowspan="4"></td>
+                    <th class="col-estrecha title_italic text--body">Subtotal</th>
+                    <td class="col-estrecha title_italic text--body">Resultado</td>
                 </tr>
                 <tr>
-                    <td class="col-estrecha text--body">Sub total</td>
-                    <th class="col-estrecha text--body">Resultado</th>
+                    <th class="col-estrecha text--body">IVA</th>
+                    <td class="col-estrecha text--body">Resultado</td>
                 </tr>
                 <tr>
-                    <td class="col-estrecha text--body">IVA</td>
-                    <th class="col-estrecha text--body">Resultado</th>
+                    <th class="col-estrecha text--body">Flete</th>
+                    <td class="col-estrecha text--body">Resultado</td>
                 </tr>
                 <tr>
-                    <td class="col-estrecha title title_italic text--body">TOTAL</td>
-                    <th class="col-estrecha title text--body">Total appsheet</th>
+                    <th class="col-estrecha title title_italic text--body">TOTAL</th>
+                    <td class="col-estrecha title text--body">Total appsheet</td>
                 </tr>
             </table>
             <div class="message">
@@ -282,6 +300,7 @@ td.col-estrecha, th.col-estrecha{
             </div>
             <p class="text--body">Atentamente.</p>
             <div class="manager_signature">
+                <div class="image_asignature"></div>
                 <div class="asignature__line"></div>
                 <p class="text--body">Encargado</p>
                 <p class="text--body">Puesto</p>
