@@ -3,12 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <title>PDF Factura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 14px;
+            font-family: Arial;
+        }
+
+        header {
+            /*            border: 1px solid red;*/
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 180px;
+        }
+
+        .header__address {
+            /*            border: 1px solid blue;*/
+            display: flex;
+            height: 100%;
+            margin: 5px;
+        }
+
+        img {
+            margin-right: 20px;
+        }
+
+        .address__right {
+            /*            border: 1px solid orange;*/
+            width: 28%;
+            height: 150;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .info__factura {
+            /*border: 1px solid green;*/
+            background-color: gainsboro;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /*Estilos de texto*/
+        h1 {
+            margin: 5px;
+        }
+
+        .text__normal {
+            margin: 10px;
+        }
+
+        .text__bold {
+            font-weight: bold;
+        }
+
+        .text__address {
+            background-color: gainsboro;
+            width: 100%;
+            margin-left: 0px;
+        }
+
+        .text__background {
+            background-color: gainsboro;
+            margin: 20px 0px;
+        }
+
+        .text_small{
+            font-size: 11px;
+        }
+
+        .td_center{
+            text-align: center;
+        }
+
+        .td_left{
+/*            border: 1px solid red;*/
+            width: 20%;
+        }
+
+        .th_margin{
+            padding: 10px 0px;
+        }
+
+        .th_margin_products{
+            padding: 5px;
+        }
+
+        /* Estilos de tablas*/
+        .tbl--info {
+/*            border: 1px solid red;*/
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        .tbl--info--encabezados{
+            text-align: center;
+        }
+
+        .tbl__info__size{
+/*            border: 1px solid red;*/
+            width: 18s0px;
+        }
+
+        .tbl--datos {
+/*            border: 1px solid blue;*/
+            width: 100%;
+            margin: 20px 0px;
+            border-collapse: collapse;
+        }
+
+        .tbl--datos--titulos {
+            background-color: gainsboro;
+        }
+
+        .tbl--totals {
+/*            border: 1px solid green;*/
+            width: 100%;
+            margin: 20px 0px;
+        }
+
+        .tbl--totals-encabezados {
+            background-color: gainsboro;
+        }
+
+        .tbl__size{
+/*            border: 1px solid red;*/
+            width: 365px;
+        }
+
+        .tbl__size-small{
+/*            border: 1px solid purple;*/
+            width: 130px;
+        }
+
+        footer {
+            /*            border: 1px solid red;*/
+            position: fixed;
+            position: fixed;
+            bottom: 0 !important;
+            width: 100%;
+
+        }
+
+        .separating_border{
+            border-right: 1px dashed black;
+        }
+
+    </style>
 </head>
 
 <body>
     <header>
-        <h1>Impulsora Avipecuaria</h1>
+        <div class="header__address">
+            <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="" width="250px"
+                height="120px">
+            <div class="address">
+                <h1 class="text__bold">IMPULSORA AVIPECUARIA</h1>
+                <p class="text__normal">Calle J A. Robertson, numero 80, colonia Adolfo Prieto, Guadalupe, Nuevo León,
+                    C.P. 67120</p>
+                <p class="text__normal">Lugar de expedición</p>
+                <p class="text__normal">RFC:</p>
+                <p class="text__normal text__bold">Régimen fiscal:</p>
+            </div>
+            <div class="address__right">
+                <div class="info__factura">
+                    <h1 class="text__bold">FACTURA</h1>
+                    <p class="text__normal">C-1</p>
+                    <p class="text__normal text__bold">Fecha/Hora Emisón</p>
+                </div>
+                <p class="text__normal text__bold text__address td_center text_small">FECHA/HORA CERTIFICACIÓN</p>
+            </div>
+        </div>
     </header>
+    <main>
+        <table class="tbl--info">
+            <thead class="tbl--info--encabezados text__background">
+                <tr>
+                    <th class="text__bold td_left th_margin">Receptor del Comprobante Fiscal</th>
+                    <th class="separating_border th_margin">2049</th>
+                    <th class="tbl__info__size text__bold th_margin">Folio fiscal</th>
+                </tr>
+            </thead>
+
+            <tr>
+                <td colspan="2" class="separating_border">Adriana Villareal Legarreta</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="separating_border">CAMINO RANCHO LA MINA SN CAMPO NUMERO 12-B 31614 CHIHUAHUA CHIHUAHUA México</td>
+                <td class="text__bold text__background text_small td_center">NO. DE CERTIFICADO DIGITAL</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="separating_border">RFC: VILA800426G2A</td>
+            </tr>
+            <tr>
+                <td colspan="2" class="separating_border">Régimen Fiscal: () General de Ley Personas Morales</td>
+                <td class="text__bold text__background separating_border text_small td_center">NO. SERIE CERTIFICADO SAT</td>
+            </tr>
+        </table>
+        <table class="tbl--datos">
+            <thead class="tbl--datos--titulos">
+                <tr>
+                    <th class="th_margin_products">Cantidad</th>
+                    <th class="th_margin_products">Unidad SAT</th>
+                    <th class="th_margin_products">Unidad de Medida</th>
+                    <th class="th_margin_products">Clave SAT</th>
+                    <th class="th_margin_products">Descripción</th>
+                    <th class="th_margin_products">PRECIO UNITARIO</th>
+                    <th class="th_margin_products">IEPS</th>
+                    <th class="th_margin_products">IVA</th>
+                    <th class="th_margin_products">Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_center">1</td>
+                    <td>H87</td>
+                    <td>Pieza</td>
+                    <td>51201700</td>
+                    <td>Volvac Nd Lasota Miv 1000 Ds</td>
+                    <td class="td_center">15,000 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">75,00 $</td>
+                </tr>
+                <tr>
+                    <td class="td_center">1</td>
+                    <td>H87</td>
+                    <td>Pieza</td>
+                    <td>51201700</td>
+                    <td>Volvac Nd Lasota Miv 1000 Ds</td>
+                    <td class="td_center">15,000 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">75,00 $</td>
+                </tr>
+                <tr>
+                    <td class="td_center">1</td>
+                    <td>H87</td>
+                    <td>Pieza</td>
+                    <td>51201700</td>
+                    <td>Volvac Nd Lasota Miv 1000 Ds</td>
+                    <td class="td_center">15,000 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">75,00 $</td>
+                </tr>
+                <tr>
+                    <td class="td_center">1</td>
+                    <td>H87</td>
+                    <td>Pieza</td>
+                    <td>51201700</td>
+                    <td>Volvac Nd Lasota Miv 1000 Ds</td>
+                    <td class="td_center">15,000 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">0,00 $</td>
+                    <td class="td_center">75,00 $</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="tbl--totals">
+            <thead class="tbl--totals-encabezados">
+                <tr>
+                    <th class="text__background" colspan="5">&nbsp;</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text__bold separating_border" colspan="2">Importe con letra: (UN MIL NOVECIENTOS SESENTA Y CINCO PESOS MXN)</td>
+                    <td></td>
+                    <td>Subtotal</td>
+                    <td>$1,750.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="tbl__size text__bold">Forma de pago: (99) Por definir</td>
+                    <td class="tbl__size text__bold separating_border">O.C.:</td>
+                    <td class="tbl__size-small td_center">003</td>
+                    <td class="tbl__size-small">IEPS: 6%</td>
+                    <td class="tbl__size-small">$0,00</td>
+                </tr>
+                <tr>
+                    <td class="separating_border" colspan="2"></td>
+                    <td class="td_center">002</td>
+                    <td>I.V.A. 16%</td>
+                    <td>$240.00</td>
+                </tr>
+                <tr>
+                    <td class="text__bold">Método de pago:</td>
+                    <td class="text__bold separating_border">Cuenta</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="separating_border" colspan="2"></td>
+                    <td class="text__bold td_center">Total</td>
+                    <td></td>
+                    <td>$1,965.00</td>
+                </tr>
+                <tr>
+                    <td class="text__bold separating_border" colspan="2">Condiciones de pago</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text__bold separating_border" colspan="2">Lugar de expedición: <span>72000</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text__bold separating_border" colspan="2">Uso de CFDI: <span>(G03) Gastos en general</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text__bold separating_border" colspan="2">Observación</td>
+                </tr>
+                <tr>
+                    <td>REM 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p class="text__bold text__background">Cadena orginal del complemento de certificación digital SAT:</p>
+        <p class="text__bold text__background">Sello digital del CFDI:</p>
+        <p class="text__bold text__background">Sello digital del SAT:</p>
+    </footer>
 </body>
 
 </html>
