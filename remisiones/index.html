@@ -1,0 +1,300 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF pedido</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 12px;
+            font-family: Arial;
+        }
+
+        .text--bold {
+            font-weight: bold;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            min-height: 100px;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header__title {
+            font-size: 35px;
+            font-weight: 700;
+        }
+
+        .header__data {
+            width: 81%;
+            height: auto;
+            align-self: flex-end;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 100px;
+        }
+
+        .image__logo {
+            background-color: blue;
+            width: 350px;
+            height: 150px;
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex;
+            padding: 0px 10px;
+        }
+
+        .content_inf {
+            width: 66%;
+            height: 25px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        main {
+            margin: 0px 50px;
+            height: 800px;
+        }
+
+        .tbl_products {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .td__center {
+            text-align: center;
+        }
+
+        th {
+            padding: 5px;
+        }
+
+        .th__cantidad,
+        .th__clave,
+        .th__desc {
+            width: 10%;
+        }
+
+        .th__descripcion {
+            width: 35%
+        }
+
+        .th__importe {
+            width: 20%;
+        }
+
+        .th_none,
+        .td_none {
+            border: none;
+        }
+
+        .td__left {
+            text-align: end;
+        }
+
+        .th_table__prueba {
+            margin: 2px;
+            padding: 0px
+        }
+
+        footer {
+            position: static;
+            /*position: fixed;*/
+            bottom: 0 !important;
+            width: 100%;
+            margin-bottom: 100px;
+            /*Revisar*/
+        }
+
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0px 100px 20px 0px;
+        }
+
+        @media query {
+
+            footer,
+            .footer__content {
+                position: fixed !important;
+                bottom: 0 !important;
+            }
+        }
+
+        .main__address {
+            display: flex;
+            height: 130px;
+
+        }
+
+        .prueba {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .address {
+            height: 100%;
+            padding: 0px 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .tbl_totals {
+            width: 35%;
+        }
+
+        .tbl_totals-th {
+            text-align: start;
+        }
+
+        .tbl_totals-td {
+            text-align: end;
+        }
+
+        .text_three,
+        .text_four{
+            margin: 25px 0px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="header__content">
+        <h1 class="header__title">IMPULSORA AVIPECUARIA</h1>
+    </header>
+    <main class="main__content">
+        <div class="main__address">
+            <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="" width=""
+                height="140px">
+            <div class="prueba">
+                <div class="address">
+                    <div class="header__data">
+                        <p><span class="text--bold">R.F.C: IAV920729KN1</span></p>
+                        <p><span class="text--bold">Pedido No. :</span>2</p>
+                    </div>
+                    <div class="text_one">
+                        <p class="text--body text--bold th_table__prueba">Domicilio fiscal: </p>
+                        <p class="text--body th_table__prueba">Calle J. A. Robertson, número 80, Colonia Adolfo Prieto,
+                            Guadalupe, Nuevo León, C.P. 67120</p>
+                    </div>
+                    <div class="text_two">
+                        <p class="text--body text--bold th_table__prueba">Lugar de expedición: </p>
+                        <p class="text--body th_table__prueba">J.A. Robertson npumero 80, Adolfo Prieto, Guadalupe,
+                            67120,
+                            Nuevo León</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text_three">
+            <p class="text--body text--bold th_table__prueba">Cliente: ( 1 ) 18 Hermanos</p>
+            <p>AV. NAVARRA 300 LA CANTERA 33077 DELICIAS CHIHUAHUA México</p>
+            <p class="text--body text--bold">RFC: DHE151013MC6</p>
+        </div>
+        <div class="text_four">
+            <div class="content_inf">
+                <p class="text--body text--bold text_margin">Vendedor: Marcelo Berlanga Gonzáles</p>
+                <p class="text--body text--bold">Su pedido: </p>
+            </div>
+            <p class="text--body text--bold">Enviar a: <span>AV. NAVARRA 300 LA CANTERA 33077 DELICIAS CHIHUAHUA México</span></p>
+        </div>
+        <table class="tbl_products">
+            <thead>
+                <tr>
+                    <th class="th__title th__cantidad">Cantidad</th>
+                    <th class="th__title th__clave">Clave</th>
+                    <th class="th__title th__descripcion">Descripción</th>
+                    <th class="th__title th__desc">% Desc</th>
+                    <th class="th__title th__pu">P/U</th>
+                    <th class="th__title th__importe">Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
+                </tr>
+                <tr>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
+                </tr>
+                <tr>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer class="footer__content">
+        <table class="tbl_totals">
+            <tbody>
+                <tr>
+                    <th class="th_none tbl_totals-th">Subtotal</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none tbl_totals-th">Descuento</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none tbl_totals-th">I.E.P.S.</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none tbl_totals-th">I.V.A.</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
+                </tr>
+                <tr>
+                    <th class="th_none tbl_totals-th">Total</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="text--bold">Referencia</p>
+    </footer>
+
+</body>
+
+</html>
