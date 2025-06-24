@@ -8,12 +8,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-size: 18px;
+            font-size: 12px;
             font-family: Arial;
-        }
-
-        .text--body {
-            margin: 25px 0px;
         }
 
         .text--bold {
@@ -23,22 +19,6 @@
         body {
             height: 100vh;
         }
-
-        /* CODIGO INICIAL
-        header {
-            width: 100%;
-            min-height: 150px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid black;
-        }
-
-        .header__data{
-            width: 60%;
-            border: 1px solid red;
-            align-self: flex-end;
-        }*/
 
         header {
             width: 100%;
@@ -64,7 +44,7 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
-            margin-right: 140px;
+            margin-right: 100px;
         }
 
         .image__logo {
@@ -80,6 +60,7 @@
         }
 
         .content_inf {
+            width: 66%;
             height: 25px;
             display: flex;
             flex-direction: row;
@@ -101,45 +82,38 @@
         td,
         th {
             border: 1px solid black;
+            padding: 5px;
+        }
+
+        .td__center {
+            text-align: center;
         }
 
         th {
             padding: 5px;
         }
 
-        /*
-        .table__prueba {
-            border-collapse: collapse;
-            width: 100%;
-            border: 1px solid green;
+        .th__cantidad,
+        .th__clave,
+        .th__desc {
+            width: 10%;
         }
 
-        .th__prueba_sup {
-            align-items: center;
-            height: 120px;
-            width: 25%;
-            border: 1px solid red;
+        .th__descripcion {
+            width: 35%
         }
 
-        .th__prueba {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: none;
-            height: 120px;
-            width: 100%;
-            text-align: left;
-            padding: 0px 15px;
-            border: 1px solid blue;
-        }*/
+        .th__importe {
+            width: 20%;
+        }
 
         .th_none,
         .td_none {
             border: none;
         }
 
-        td {
-            padding: 8px;
+        .td__left {
+            text-align: end;
         }
 
         .th_table__prueba {
@@ -161,7 +135,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
-            padding: 0px 50px 20px 0px;
+            padding: 0px 100px 20px 0px;
         }
 
         @media query {
@@ -175,7 +149,7 @@
 
         .main__address {
             display: flex;
-            height: 150px;
+            height: 130px;
 
         }
 
@@ -193,6 +167,24 @@
             flex-direction: column;
             justify-content: space-between;
         }
+
+        .tbl_totals {
+            width: 35%;
+        }
+
+        .tbl_totals-th {
+            text-align: start;
+        }
+
+        .tbl_totals-td {
+            text-align: end;
+        }
+
+        .text_three,
+        .text_four{
+            margin: 25px 0px;
+        }
+
     </style>
 </head>
 
@@ -207,43 +199,70 @@
             <div class="prueba">
                 <div class="address">
                     <div class="header__data">
-                        <p><span class="text--bold">R.F.C:</span>Resultado</p>
-                        <p><span class="text--bold">Pedido No. :</span>Resultado</p>
+                        <p><span class="text--bold">R.F.C: IAV920729KN1</span></p>
+                        <p><span class="text--bold">Pedido No. :</span>2</p>
                     </div>
-                    <p class="text--body text--bold th_table__prueba">Domiciolio fiscal: </p>
-                    <p class="text--body th_table__prueba"></p>
-                    <p class="text--body text--bold th_table__prueba">Lugar de expedición: </p>
-                    <p class="text--body th_table__prueba"></p>
+                    <div class="text_one">
+                        <p class="text--body text--bold th_table__prueba">Domicilio fiscal: </p>
+                        <p class="text--body th_table__prueba">Calle J. A. Robertson, número 80, Colonia Adolfo Prieto,
+                            Guadalupe, Nuevo León, C.P. 67120</p>
+                    </div>
+                    <div class="text_two">
+                        <p class="text--body text--bold th_table__prueba">Lugar de expedición: </p>
+                        <p class="text--body th_table__prueba">J.A. Robertson npumero 80, Adolfo Prieto, Guadalupe,
+                            67120,
+                            Nuevo León</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <p class="text--body text--bold">Cliente: ( ) </p>
-        <p class="text--body text--bold">RFC: </p>
-        <div class="content_inf">
-            <p class="text--body text--bold">Vendedor:</p>
-            <p class="text--body text--bold">Su pedido: </p>
+        <div class="text_three">
+            <p class="text--body text--bold th_table__prueba">Cliente: ( 1 ) 18 Hermanos</p>
+            <p>AV. NAVARRA 300 LA CANTERA 33077 DELICIAS CHIHUAHUA México</p>
+            <p class="text--body text--bold">RFC: DHE151013MC6</p>
         </div>
-        <p class="text--body text--bold">Enviar a: </p>
-        <p class="text--body text--bold">Destino: </p>
+        <div class="text_four">
+            <div class="content_inf">
+                <p class="text--body text--bold text_margin">Vendedor: Marcelo Berlanga Gonzáles</p>
+                <p class="text--body text--bold">Su pedido: </p>
+            </div>
+            <p class="text--body text--bold">Enviar a: <span>AV. NAVARRA 300 LA CANTERA 33077 DELICIAS CHIHUAHUA México</span></p>
+        </div>
         <table class="tbl_products">
             <thead>
                 <tr>
-                    <th class="th__title">Cantidad</th>
-                    <th class="th__title">Clave</th>
-                    <th class="th__title">Descripción</th>
-                    <th class="th__title">% Desc</th>
-                    <th class="th__title">P/U</th>
-                    <th class="th__title">Importe</th>
+                    <th class="th__title th__cantidad">Cantidad</th>
+                    <th class="th__title th__clave">Clave</th>
+                    <th class="th__title th__descripcion">Descripción</th>
+                    <th class="th__title th__desc">% Desc</th>
+                    <th class="th__title th__pu">P/U</th>
+                    <th class="th__title th__importe">Importe</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Referencia</td>
-                    <td>Referencia</td>
-                    <td>Referencia</td>
-                    <td>Referencia</td>
-                    <td>Referencia</td>
-                    <td>Referencia</td>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
+                </tr>
+                <tr>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
+                </tr>
+                <tr>
+                    <td class="td__center">10</td>
+                    <td>SH-03</td>
+                    <td>Univax Bd 5,000 Ds</td>
+                    <td class="td__left">0.00%</td>
+                    <td class="td__left">$100.0000</td>
+                    <td class="td__left">$1,000.00</td>
                 </tr>
             </tbody>
         </table>
@@ -252,24 +271,24 @@
         <table class="tbl_totals">
             <tbody>
                 <tr>
-                    <th class="th_none">Subtotal</th>
-                    <td class="td_none">Referencia</td>
+                    <th class="th_none tbl_totals-th">Subtotal</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
                 </tr>
                 <tr>
-                    <th class="th_none">Descuento</th>
-                    <td class="td_none">Referencia</td>
+                    <th class="th_none tbl_totals-th">Descuento</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
                 </tr>
                 <tr>
-                    <th class="th_none">I.E.P.S.</th>
-                    <td class="td_none">Referencia</td>
+                    <th class="th_none tbl_totals-th">I.E.P.S.</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
                 </tr>
                 <tr>
-                    <th class="th_none">I.V.A.</th>
-                    <td class="td_none">Referencia</td>
+                    <th class="th_none tbl_totals-th">I.V.A.</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
                 </tr>
                 <tr>
-                    <th class="th_none">Total</th>
-                    <td class="td_none">Referencia</td>
+                    <th class="th_none tbl_totals-th">Total</th>
+                    <td class="td_none tbl_totals-td">Referencia</td>
                 </tr>
             </tbody>
         </table>
