@@ -49,6 +49,14 @@
             justify-content: space-between;
         }
 
+        .col_der {
+            width: 210px;
+        }
+
+        .td_der {
+            padding: 5px;
+        }
+
         /*Estilos de texto*/
         h1 {
             margin: 5px;
@@ -58,7 +66,7 @@
             margin: 10px;
         }
 
-        .text__normal_right{
+        .text__normal_right {
             margin: 0px;
         }
 
@@ -81,7 +89,7 @@
             font-size: 11px;
         }
 
-        .text_factura_end{
+        .text_factura_end {
             height: 200px;
             display: flex;
             flex-direction: column;
@@ -167,17 +175,39 @@
 
         }
 
-        .footer_tbl{
+        .footer_tbl {
+            width: 90vh;
             margin: 25px 0px;
+
         }
 
-        .footer_line{
+        .footer_line {
             margin: 0px;
         }
 
         .separating_border {
             border-right: 1px dashed black;
         }
+
+        .footer_content{
+            display: flex;
+            justify-content: space-between;
+            
+
+        }
+
+        .footer_content-tbl{
+            width: 60%;
+            border: 1px solid green;
+        }
+
+        .footer_qr{
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            width: 20%;
+        }
+
     </style>
 </head>
 
@@ -188,11 +218,30 @@
                 height="120px">
             <div class="address">
                 <h1 class="text__bold">IMPULSORA AVIPECUARIA</h1>
-                <p class="text__normal">Calle J A. Robertson, numero 80, colonia Adolfo Prieto, Guadalupe, Nuevo León,
+                <!--            <p class="text__normal">Calle J A. Robertson, numero 80, colonia Adolfo Prieto, Guadalupe, Nuevo León,
                     C.P. 67120</p>
                 <p class="text__normal">Lugar de expedición</p>
                 <p class="text__normal">RFC:</p>
-                <p class="text__normal text__bold">Régimen fiscal:</p>
+                <p class="text__normal text__bold">Régimen fiscal:</p>-->
+                <table>
+                    <tr>
+                        <td class="text__normal td_der" colspan="2">Calle J A. Robertson, numero 80, colonia Adolfo
+                            Prieto, Guadalupe, Nuevo León,
+                            C.P. 67120</td>
+                    </tr>
+                    <tr>
+                        <td class="text__normal col_der td_der">Lugar de expedición</td>
+                        <td>Prueba</td>
+                    </tr>
+                    <tr>
+                        <td class="text__normal col_der td_der">RFC:</td>
+                        <td>Prueba</td>
+                    </tr>
+                    <tr>
+                        <td class="text__normal text__bold col_der td_der">Régimen fiscal:</td>
+                        <td>Prueba</td>
+                    </tr>
+                </table>
             </div>
             <div class="address__right">
                 <div class="info__factura">
@@ -202,8 +251,8 @@
                     <p class="text__normal_right">prueba</p>
                 </div>
                 <div class="text_factura_end">
-                <p class="text__normal text__bold text__address td_center text_small">FECHA/HORA CERTIFICACIÓN</p>
-                <p class="text__normal_right">prueba</p>
+                    <p class="text__normal text__bold text__address td_center text_small">FECHA/HORA CERTIFICACIÓN</p>
+                    <p class="text__normal_right">prueba</p>
                 </div>
             </div>
         </div>
@@ -394,18 +443,27 @@
         </table>
     </main>
     <footer>
-        <div class="footer_tbl">
-            <p class="text__bold text__background footer_line">Cadena orginal del complemento de certificación digital SAT:</p>
-            <p>prueba</p>
+        <div class="footer_content">
+            <div class="footer_content--tbl">
+                <div class="footer_tbl">
+                    <p class="text__bold text__background footer_line">Cadena orginal del complemento de certificación
+                        digital SAT:</p>
+                    <p>prueba</p>
+                </div>
+                <div class="footer_tbl">
+                    <p class="text__bold text__background footer_line">Sello digital del CFDI:</p>
+                    <p>prueba</p>
+                </div>
+                <div class="footer_tbl">
+                    <p class="text__bold text__background footer_line">Sello digital del SAT:</p>
+                    <p>prueba</p>
+                </div>
+            </div>
+            <div class="footer_qr">
+                <p>Imagen</p>
+            </div>
         </div>
-        <div class="footer_tbl">
-            <p class="text__bold text__background footer_line">Sello digital del CFDI:</p>
-            <p>prueba</p>
-        </div>
-        <div class="footer_tbl">
-            <p class="text__bold text__background footer_line">Sello digital del SAT:</p>
-            <p>prueba</p>
-        </div>
+
     </footer>
 </body>
 
