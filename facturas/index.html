@@ -34,16 +34,15 @@
         .address__right {
             /*            border: 1px solid orange;*/
             width: 28%;
-            height: 150;
+            height: 165;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
 
         .info__factura {
-            /*border: 1px solid green;*/
             background-color: gainsboro;
-            height: 60%;
+            height: 45%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -57,6 +56,10 @@
 
         .text__normal {
             margin: 10px;
+        }
+
+        .text__normal_right{
+            margin: 0px;
         }
 
         .text__bold {
@@ -78,6 +81,14 @@
             font-size: 11px;
         }
 
+        .text_factura_end{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
         .td_center {
             text-align: center;
         }
@@ -87,9 +98,9 @@
             width: 20%;
         }
 
-.td_individual{
-    padding-top: 20px;
-}
+        .td_individual {
+            padding-top: 20px;
+        }
 
         .th_margin {
             padding: 10px 0px;
@@ -156,6 +167,14 @@
 
         }
 
+        .footer_tbl{
+            margin: 25px 0px;
+        }
+
+        .footer_line{
+            margin: 0px;
+        }
+
         .separating_border {
             border-right: 1px dashed black;
         }
@@ -178,10 +197,14 @@
             <div class="address__right">
                 <div class="info__factura">
                     <h1 class="text__bold">FACTURA</h1>
-                    <p class="text__normal">C-1</p>
+                    <p class="text__normal_right">C-1</p>
                     <p class="text__normal text__bold">Fecha/Hora Emisón</p>
+                    <p class="text__normal_right">prueba</p>
                 </div>
+                <div class="text_factura_end">
                 <p class="text__normal text__bold text__address td_center text_small">FECHA/HORA CERTIFICACIÓN</p>
+                <p class="text__normal_right">prueba</p>
+                </div>
             </div>
         </div>
     </header>
@@ -208,7 +231,7 @@
             <tr>
                 <td colspan="2" class="separating_border">CAMINO RANCHO LA MINA SN CAMPO NUMERO 12-B 31614 CHIHUAHUA
                     CHIHUAHUA México</td>
-                <td></td>
+                <td class="td_center">prueba</td>
             </tr>
             <tr>
                 <td colspan="2" class="separating_border">&nbsp;</td>
@@ -223,7 +246,7 @@
             </tr>
             <tr>
                 <td colspan="2" class="separating_border">Régimen Fiscal: () General de Ley Personas Morales</td>
-                <td colspan="2" class="separating_border"></td>
+                <td colspan="2" class="separating_border td_center">prueba</td>
             </tr>
         </table>
         <table class="tbl--datos">
@@ -371,9 +394,18 @@
         </table>
     </main>
     <footer>
-        <p class="text__bold text__background">Cadena orginal del complemento de certificación digital SAT:</p>
-        <p class="text__bold text__background">Sello digital del CFDI:</p>
-        <p class="text__bold text__background">Sello digital del SAT:</p>
+        <div class="footer_tbl">
+            <p class="text__bold text__background footer_line">Cadena orginal del complemento de certificación digital SAT:</p>
+            <p>prueba</p>
+        </div>
+        <div class="footer_tbl">
+            <p class="text__bold text__background footer_line">Sello digital del CFDI:</p>
+            <p>prueba</p>
+        </div>
+        <div class="footer_tbl">
+            <p class="text__bold text__background footer_line">Sello digital del SAT:</p>
+            <p>prueba</p>
+        </div>
     </footer>
 </body>
 
