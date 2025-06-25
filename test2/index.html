@@ -1,0 +1,240 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Remisión</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        /*Estilos de letra*/
+        .text_bold {
+            font-weight: 700;
+        }
+
+        .text_margin--none {
+            padding: 0px;
+        }
+
+        .text_center {
+            text-align: center;
+        }
+
+        .text_left {
+            text-align: start;
+        }
+
+        /*Estilos al header*/
+        header {
+/*            border: 1px solid red;*/
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        /*Estilos al main header*/
+        .main_header {
+/*            border: 1px solid blue;*/
+            width: 100%;
+            height: 160px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 10px;
+        }
+
+        .main_header--data {
+/*            border: 1px solid green;*/
+            width: 70%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .header_data {
+            width: 90%;
+/*            border: 1px solid red;*/
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /*Estilos al main content*/
+        .main_content {
+/*            border: 1px solid red;*/
+            margin: 20px 10px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .content_lower {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tbl_products {
+            width: 98%;
+            margin: 20px 10px;
+/*            border: 1px solid red;*/
+            border-collapse: collapse;
+        }
+
+        /*Estilos td y th para tablas*/
+        td,
+        th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 2px 3px;
+        }
+
+        .th_style {
+            padding: 5px 0;
+        }
+
+        .th_small {
+            width: 10%;
+        }
+
+        .th_big {
+            width: 20%;
+        }
+
+        .td_right {
+            text-align: end
+        }
+
+        .tbl_td--dif {
+            border: none;
+        }
+
+        /*Estilos del footer*/
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin: 0px;
+/*            border: 1px solid blue;*/
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        .tbl_totals {
+            width: 30%;
+            margin-right: 150px;
+/*            border: 1px solid red;*/
+        }
+
+        .footer_p{
+            width: 100%;
+            padding: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Impulsora Avipecuaria</h1>
+    </header>
+
+    <main>
+        <div class="main_header">
+            <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="">
+            <div class="main_header--data">
+                <div class="header_data">
+                    <p><span class="text_bold">RFC: </span>Referencia</p>
+                    <p><span class="text_bold">Remisión: </span>Referencia</p>
+                </div>
+                <div class="header_data--middle">
+                    <p class="text_bold text_margin--none">Domicilio:</p>
+                    <p>Referencia</p>
+                </div>
+                <div class="header_data--lower">
+                    <p class="text_bold text_margin--none">Lugar de expedición: </p>
+                    <p>Referencia</p>
+                </div>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="main_content--top">
+                <p><span span class="text_bold text_margin--none">Cliente: </span>( ) Referencia</p>
+                <p>Referencia</p>
+                <p><span span class="text_bold ">RFC: </span>Referencia</p>
+            </div>
+            <div class="main_content--lower">
+                <div class="content_lower">
+                    <p><span span class="text_bold ">Vendedor: </span>Referencia</p>
+                    <p><span span class="text_bold">Pedido/Orden de compra: </span>Referencia</p>
+                </div>
+                <p><span span class="text_bold">Enviar a:</span> Referencia</p>
+            </div>
+            <p><span span class="text_bold">Destino:</span></p>
+        </div>
+        <table class="tbl_products">
+            <thead>
+                <tr>
+                    <th class="th_style th_small">Cantidad</th>
+                    <th class="th_style th_small">Clave</th>
+                    <th class="th_style">Descripción</th>
+                    <th class="th_style th_small">% Desc</th>
+                    <th class="th_style th_big">P/U</th>
+                    <th class="th_style th_big">Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text_center">Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td class="td_right">Referencia</td>
+                    <td class="td_right">Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <table class="tbl_totals">
+            <tr>
+                <td class="text_bold tbl_td--dif">Subtotal</td>
+                <td class="td_right tbl_td--dif">Referencia</td>
+            </tr>
+            <tr>
+                <td class="text_bold tbl_td--dif">Descuento</td>
+                <td class="td_right tbl_td--dif">Referencia</td>
+            </tr>
+            <tr>
+                <td class="text_bold tbl_td--dif">I.E.P.S</td>
+                <td class="td_right tbl_td--dif">Referencia</td>
+            </tr>
+            <tr>
+                <td class="text_bold tbl_td--dif">I.V.A</td>
+                <td class="td_right tbl_td--dif">Referencia</td>
+            </tr>
+            <tr>
+                <td class="text_bold tbl_td--dif">Total</td>
+                <td class="td_right tbl_td--dif">Referencia</td>
+            </tr>
+        </table>
+        <div class="footer_p">
+            <p class="text_bold text_left">Referencia</p>
+        </div>
+    </footer>
+</body>
+
+</html>

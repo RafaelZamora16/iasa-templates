@@ -5,7 +5,7 @@
     <title>PDF Factura</title>
     <style>
         * {
-            margin: 0;
+            margin: 0px;
             padding: 0;
             box-sizing: border-box;
             font-size: 14px;
@@ -183,6 +183,7 @@
 
         .footer_line {
             margin: 0px;
+            width: 100%;
         }
 
         .separating_border {
@@ -190,15 +191,17 @@
         }
 
         .footer_content{
+            width: 98%;
             display: flex;
-            justify-content: space-between;
-            
+            align-items: end;
+            margin: 0px 10px;
+            border: 1px solid red;
 
         }
 
-        .footer_content-tbl{
-            width: 60%;
-            border: 1px solid green;
+        .footer_content--tbl{
+            width: 100%;
+            border: 1px solid blue;
         }
 
         .footer_qr{
@@ -206,6 +209,8 @@
             align-items:center;
             justify-content: center;
             width: 20%;
+            height: 120px;
+            border: 1px solid green;
         }
 
     </style>
