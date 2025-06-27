@@ -1,0 +1,201 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Requisición de compra</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        /*Estilos de texto*/
+        .text_center{
+            text-align: center;
+        }
+
+        .text_right{
+            text-align: end;
+        }
+
+        .text_bold{
+            font-weight: 700;
+        }
+
+        /*Estilos de header*/
+
+        header {
+            width: 98%;
+            height: 30px;
+            text-align: end;
+        }
+
+        .header_h1 {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        /*Estilos del main*/
+        main {
+            width: 98%;
+            margin: 20px 10px;
+        }
+
+        .main_header {
+            width: 100%;
+            height: 150px;
+            display: flex;
+            margin: 20px 10px;
+        }
+
+        .main_header--data {
+            width: 70%;
+            height: 130;
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .main_content{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 10px;
+        }
+
+        .main_content--left{
+            width: 70%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        
+        .main_content--right{
+            width: 50%;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /*Estilos de tabla*/
+        .main_tbl{
+            width: 100%;
+            margin: 20px 10px;
+        }
+
+        .th_narrow--column{
+            width: 80px;
+        }
+
+        .main_th{
+            padding: 5px;
+        }
+
+        /*Estilos del footer*/
+        footer{
+            width: 98%;
+            margin: 20px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer_tbl{
+            width: 30%;
+            margin-right: 10px;
+        }
+
+        .th_footer{
+            text-align: start;
+        }
+
+        .footer_p{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<header>
+    <h1 class="header_h1">IMPULSORA AVIPECUARIA</h1>
+</header>
+<main>
+    <div class="main_header">
+        <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="">
+        <div class="main_header--data">
+            <p class="text_bold">Domicilio fiscal:</p>
+            <p>Referencia</p>
+            <p class="text_bold">Lugar de expedición</p>
+            <p>Referencia</p>
+        </div>
+    </div>
+    <div class="main_content">
+        <div class="main_content--left">
+            <p><span class="text_bold">Proveedor: </span></p>
+            <p><span class="text_bold">DIRECCIÓN FISCAL COMPLETA: </span> Referencia</p>
+            <p><span class="text_bold">RFC: </span></p>
+        </div>
+        <div class="main_content--right">
+            <p><span class="text_bold">REQUISICIÓN No.: </span>Referencia</p>
+            <p><span class="text_bold">Fecha: </span>Referencia</p>
+            <p><span class="text_bold">Almacén: </span>Referencia</p>
+        </div>
+    </div>
+    <table class="main_tbl">
+        <thead>
+            <tr>
+                <th class="th_narrow--column">Cantidad</th>
+                <th class="th_narrow--column">Clave</th>
+                <th>Descripción</th>
+                <th class="th_narrow--column">%Desc</th>
+                <th>P/U</th>
+                <th>Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text_center main_th">Referencia</td>
+                <td class="main_th">Referencia</td>
+                <td class="main_th">Referencia</td>
+                <td class="text_right main_th">Referencia</td>
+                <td class="text_right main_th">Referencia</td>
+                <td class="text_right main_th">Referencia</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+<footer>
+    <table class="footer_tbl">
+        <tr>
+            <th class="th_footer">Subtotal</th>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th class="th_footer">Descuento</th>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th class="th_footer">I.E.P.S</th>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th class="th_footer">I.V.A</th>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th class="th_footer">Total</th>
+            <td class="text_right">Referencia</td>
+        </tr>
+    </table>
+    <p class="footer_p text_bold">Referencia</p>
+</footer>
+
+</html>
