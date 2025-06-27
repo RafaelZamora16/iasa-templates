@@ -1,0 +1,161 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF compras</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial;
+            font-size: 16px;
+        }
+
+        /*Estilos de letra*/
+        .text_bold{
+            font-weight: 700;
+        }
+
+        .text_right{
+            text-align: end;
+        }
+
+        /*Estilos de header*/
+        header{
+            width: 98%;
+            text-align: end;
+            margin: 20px 10px;
+        }
+
+        .header_h1{
+            font-size: 30px;
+        }
+
+        /*Estilos del main*/
+        .main_header{
+            width: 100%;
+            height: 150px;
+            display: flex;
+            margin: 20px 10px;
+        }
+        .main_header--data{
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+
+        .main_content{
+            margin: 20px 10px;
+        }
+
+        .main_p{
+            margin-bottom: 20px;
+        }
+
+        .main_tbl{
+            width: 98%;
+            margin: 0px 10px;
+        }
+
+        .main_tbl--td{
+            width: 50px;
+        }
+
+        th,
+        td{
+            padding: 3px 5px;
+        }
+
+        /*Estilos del footer*/
+        footer{
+            width: 98%;
+            margin: 20px 10px;
+            display: flex;
+            justify-content: end;
+            position: fixed;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<header>
+    <h1 class="header_h1">IMPULSORA AVIPECUARIA</h1>
+</header>
+<main>
+    <div class="main_header">
+        <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="">
+        <div class="main_header--data">
+            <p class="text_bold">Domicilio fiscal: </p>
+            <p>Referencia</p>
+            <p class="text_bold">Lugar de expedición: </p>
+            <p>Referencia</p>
+        </div>
+    </div>
+    <div class="main_content">
+        <p class="main_p"><span class="text_bold">REPORTE DE ORDENES DE COMPRA RECIBIDAS DE: </span>Referencia</p>
+    <table class="main_tbl">
+        <thead>
+            <tr>
+                <th>Folio</th>
+                <th>Oficina</th>
+                <th>Proveedor</th>
+                <th>Factura</th>
+                <th class="main_tbl--td">Fecha recepción</th>
+                <th>Total</th>
+                <th>IVA</th>
+                <th>IEPS</th>
+                <th>Descuento</th>
+                <th>Importe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Referencia</td>
+                <td>Referencia</td>
+                <td>Referencia</td>
+                <td>Referencia</td>
+                <td>Referencia</td>
+                <td class="text_right">Referencia</td>
+                <td class="text_right">Referencia</td>
+                <td class="text_right">Referencia</td>
+                <td class="text_right">Referencia</td>
+                <td class="text_right">Referencia</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</main>
+<footer>
+    <table>
+        <tr>
+            <th><span class="text_bold">Subtotal</span></th>
+            <th></th>
+            <th class="text_right">Referencia</th>
+        </tr>
+        <tr>
+            <th><span class="text_bold">Descuento. fin</span></th>
+            <td></td>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th><span class="text_bold">I.E.P.S</span></th>
+            <td></td>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th><span class="text_bold">I.V.A</span></th>
+            <td></td>
+            <td class="text_right">Referencia</td>
+        </tr>
+        <tr>
+            <th><span class="text_bold">Total</span></th>
+            <td></td>
+            <td class="text_right">Referencias</td>
+        </tr>
+    </table>
+</footer>
+
+</html>
