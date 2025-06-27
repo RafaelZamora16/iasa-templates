@@ -13,19 +13,19 @@
         }
 
         /*Estilos de letra*/
-        .text_bold{
+        .text_bold {
             font-weight: 700;
         }
 
-        .text_center{
+        .text_center {
             text-align: center;
         }
 
-        .text_right{
+        .text_right {
             text-align: end;
         }
 
-        .text_left{
+        .text_left {
             text-align: start;
         }
 
@@ -74,7 +74,7 @@
 
         .content_data--right {
             width: 30%;
-            height: 200px;
+            height: 180px;
             padding-left: 10px;
             display: flex;
             flex-direction: column;
@@ -85,18 +85,29 @@
         .main_tbl {
             width: 98%;
             margin: 30px 10px;
+            border-collapse: collapse;
         }
 
-        .th_narrow--column{
+        .td_main--tbl,
+        .th_main--tbl{
+            border: 1px solid black;
+        }
+
+        .th_narrow--column {
             width: 80px;
+            padding: 10px;
         }
 
-        .th_normal{
+        .th_normal {
             width: 140px;
         }
 
+        .td_padding{
+            padding: 0px 3px;
+        }
+
         /*Estilos en el footer*/
-        footer{
+        footer {
             position: fixed;
             bottom: 0;
             width: 98%;
@@ -107,15 +118,14 @@
             margin: 20px 10px;
         }
 
-        .footer_tbl{
+        .footer_tbl {
             width: 33%;
         }
 
-        .footer_totals{
+        .footer_totals {
             width: 100%;
             margin-top: 20px;
         }
-
     </style>
 </head>
 
@@ -140,33 +150,38 @@
             <p><span class="text_bold">RFC: </span>Referencia</p>
         </div>
         <div class="content_data--right">
-            <p><span class="text_bold">Compra: </span>Referencia</p>
-            <p><span class="text_bold">Fecha de compra: </span>Referencia</p>
-            <p><span class="text_bold">Fecha factura: </span>Referencia</p>
+            <div>
+                <p><span class="text_bold">ORDEN No: </span>Referencia</p>
+                <p><span class="text_bold">Fecha: </span>Referencia</p>
+            </div>
+
             <p><span class="text_bold">Almacén: </span>Referencia</p>
-            <p><span class="text_bold">Dirección de entrega: </span>Referencia</p>
-            <p><span class="text_bold">Entregar a: </span>Referencia</p>
+            <div>
+                <p><span class="text_bold">Dirección de entrega: </span>Referencia</p>
+                <p><span class="text_bold">Entregar a: </span>Referencia</p>
+            </div>
+
         </div>
     </div>
     <table class="main_tbl">
         <thead>
             <tr>
-                <th class="th_narrow--column">Cantidad</th>
-                <th class="th_narrow--column">Clave</th>
-                <th>Descripción</th> 
-                <th class="th_normal">%Desc</th>
-                <th class="th_normal">P/U</th>
-                <th>Importe</th>
+                <th class="th_narrow--column th_main--tbl">Cantidad</th>
+                <th class="th_narrow--column th_main--tbl">Clave</th>
+                <th class="th_main--tbl">Descripción</th>
+                <th class="th_normal th_main--tbl">%Desc</th>
+                <th class="th_normal th_main--tbl">P/U</th>
+                <th class="th_main--tbl">Importe</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td class="text_center">Referencia</td>
-                <td>Referencia</td>
-                <td>Referencia</td>
-                <td>Referencia</td>
-                <td class="text_right">Referencia</td>
-                <td class="text_right">Referencia</td>
+                <td class="text_center td_main--tbl td_padding">Referencia</td>
+                <td class="th_main--tbl td_padding">Referencia</td>
+                <td class="th_main--tbl td_padding">Referencia</td>
+                <td class="th_main--tbl td_padding">Referencia</td>
+                <td class="text_right th_main--tbl td_padding">Referencia</td>
+                <td class="text_right th_main--tbl td_padding">Referencia</td>
             </tr>
         </tbody>
     </table>
