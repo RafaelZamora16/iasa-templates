@@ -109,13 +109,32 @@
         .td_individual {
             padding-top: 20px;
         }
-
+*/
         .th_margin {
             padding: 10px 0px;
-        }
+        }*/
 
         .th_margin_products {
-            padding: 5px;
+            padding: 2px;
+        }
+
+        .th_narrow--column{
+            width: 5px;
+            border: 1px solid red;
+        }
+
+        .th_column{
+            width: 15px;
+            border: 1px solid green;
+        }
+
+        .th_wide--column{
+            width: 20%;
+            border: 1px solid blue;
+        }
+
+        .th_right{
+            text-align: end;
         }
 
         /* Estilos de tablas*/
@@ -140,7 +159,12 @@
             width: 100%;
             margin: 20px 0px;
             border-collapse: collapse;
+            border: 1px solid black;
         }
+/*
+        td,th{
+            border: 1px solid black;
+        }*/
 
         .tbl--datos--titulos {
             background-color: gainsboro;
@@ -306,15 +330,15 @@
         <table class="tbl--datos">
             <thead class="tbl--datos--titulos">
                 <tr>
-                    <th class="th_margin_products">Cantidad</th>
-                    <th class="th_margin_products">Unidad SAT</th>
-                    <th class="th_margin_products">Unidad de Medida</th>
-                    <th class="th_margin_products">Clave SAT</th>
-                    <th class="th_margin_products">Descripción</th>
-                    <th class="th_margin_products">PRECIO UNITARIO</th>
-                    <th class="th_margin_products">IEPS</th>
-                    <th class="th_margin_products">IVA</th>
-                    <th class="th_margin_products">Importe</th>
+                    <th class="th_margin_products th_narrow--column">Cantidad</th>
+                    <th class="th_margin_products th_narrow--column">Unidad SAT</th>
+                    <th class="th_margin_products th_column">Unidad de Medida</th>
+                    <th class="th_margin_products th_narrow--column">Clave SAT</th>
+                    <th class="th_margin_products th_wide--column">Descripción</th>
+                    <th class="th_margin_products th_column">PRECIO UNITARIO</th>
+                    <th class="th_margin_products th_narrow--column">IEPS</th>
+                    <th class="th_margin_products th_narrow--column">IVA</th>
+                    <th class="th_margin_products th_narrow--column">Importe</th>
                 </tr>
             </thead>
             <tbody>
@@ -324,10 +348,10 @@
                     <td>Pieza</td>
                     <td>51201700</td>
                     <td>Volvac Nd Lasota Miv 1000 Ds</td>
-                    <td class="td_center">15,000 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">75,00 $</td>
+                    <td class="th_right">15,000 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">75,00 $</td>
                 </tr>
                 <tr>
                     <td class="td_center">1</td>
@@ -335,10 +359,10 @@
                     <td>Pieza</td>
                     <td>51201700</td>
                     <td>Volvac Nd Lasota Miv 1000 Ds</td>
-                    <td class="td_center">15,000 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">75,00 $</td>
+                    <td class="th_right">15,000 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">75,00 $</td>
                 </tr>
                 <tr>
                     <td class="td_center">1</td>
@@ -346,10 +370,10 @@
                     <td>Pieza</td>
                     <td>51201700</td>
                     <td>Volvac Nd Lasota Miv 1000 Ds</td>
-                    <td class="td_center">15,000 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">75,00 $</td>
+                    <td class="th_right">15,000 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">75,00 $</td>
                 </tr>
                 <tr>
                     <td class="td_center">1</td>
@@ -357,10 +381,10 @@
                     <td>Pieza</td>
                     <td>51201700</td>
                     <td>Volvac Nd Lasota Miv 1000 Ds</td>
-                    <td class="td_center">15,000 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">0,00 $</td>
-                    <td class="td_center">75,00 $</td>
+                    <td class="th_right">15,000 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">0,00 $</td>
+                    <td class="th_right">75,00 $</td>
                 </tr>
             </tbody>
         </table>
