@@ -1,0 +1,167 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Remisión</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-family: Arial;
+        }
+
+        /*Estilos de texto*/
+        .text_bold{
+            font-weight: 700;
+        }
+
+        .text_right{
+            text-align: end;
+        }
+
+        .text_left{
+            text-align: start;
+        }
+
+        header{
+            width: 98%;
+            margin: 20px 10px;
+        }
+
+        .header_h1{
+            text-align: end;
+            font-size: 30px;
+        }
+
+        .main_header{
+            width: 100%;
+            height: 150px;
+            display: flex;
+        }
+
+        .main_header--data{
+            width: 70%;
+            height: 130px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 20px;
+        }
+
+        /*Estilos para main*/
+        .main_content{
+            margin: 20px 10px;
+        }
+
+        .main_tbl{
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .th_narrow--column{
+            width: 50px;
+        }
+
+        td{
+            padding: 5px;
+        }
+
+        footer{
+            width: 98%;
+            height: 150px;
+            margin: 20px 10px;
+            display: flex;
+            justify-content: end;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .footer_tbl{
+            width: 45%;
+        }
+
+    </style>
+</head>
+
+<header>
+    <h1 class="header_h1">IMPULSORA AVIPECUARIA</h1>
+</header>
+
+<main>
+    <div class="main_header">
+        <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="">
+        <div class="main_header--data">
+            <p class="text_bold">Domicilio fiscal:</p>
+            <p>Referencia</p>
+            <p class="text_bold">Lugar de expedición:</p>
+            <p>Referencia</p>
+        </div>
+    </div>
+    <div class="main_content">
+        <p><span class="text_bold">REPORTE DE ORDENES DE COMPRA RECIBIDAS DE: </span>Referencia</p>
+        <table class="main_tbl">
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Oficina</th>
+                    <th>Proveedor</th>
+                    <th>Factura</th>
+                    <th class="th_narrow--column">Fecha recepción</th>
+                    <th>Total</th>
+                    <th>IVA</th>
+                    <th>IEPS</th>
+                    <th>Descuento</th>
+                    <th>Importe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td>Referencia</td>
+                    <td class="text_right">Referencia</td>
+                    <td class="text_right">Referencia</td>
+                    <td class="text_right">Referencia</td>
+                    <td class="text_right">Referencia</td>
+                    <td class="text_right">Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<footer>
+<table class="footer_tbl">
+    <tr>
+        <th class="text_left">Subtotal</th>
+        <td></td>
+        <td class="text_right">Referencia</td>
+    </tr>
+    <tr>
+        <th class="text_left">Desc. fin</th>
+        <td></td>
+        <td class="text_right">Referencia</td>
+    </tr>
+    <tr>
+        <th class="text_left">I.E.P.S</th>
+        <td></td>
+        <td class="text_right">Referencia</td>
+    </tr>
+    <tr>
+        <th class="text_left">I.V.A</th>
+        <td></td>
+        <td class="text_right">Referencia</td>
+    </tr>
+    <tr>
+        <th class="text_left">Total</th>
+        <td></td>
+        <td class="text_right">Referencia</td>
+    </tr>
+</table>
+</footer>
+
+</html>
