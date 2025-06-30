@@ -1,0 +1,667 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Cotización</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 20px;
+            font-family: Arial;
+        }
+
+        body {
+            display: grid;
+            grid-template-rows: minmax(0, 200px) 1fr minmax(0, 75px);
+            height: 100vh;
+        }
+
+        /* HEADER */
+
+        .header {
+            width: 100%;
+            min-height: 150px;
+            background-color: #fcd62a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header__logo {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            width: 100%;
+            max-width: 130px;
+        }
+
+        .header__title {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-end;
+            padding: 0px 0px 25px 0px;
+        }
+
+        .header__title h1 {
+            font-size: 45pt;
+            font-weight: 300;
+        }
+
+        /*
+.image_pio{
+    border: 1px solid red;
+}*/
+
+        /* MAIN */
+
+        .main {
+            display: flex;
+            justify-content: center;
+
+            padding: 25px;
+        }
+
+        .container {
+            width: 1080px;
+            padding: 0px 100px;
+        }
+
+        .date-info {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        /* FOOTER */
+
+        .footer {
+            position: fixed;
+            bottom: 0 !important;
+            width: 100%;
+            /* height: 100%;*/
+            padding: 12px 10px;
+        }
+
+        .footer__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+
+        .text {
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .text--large {
+            font-size: 15pt;
+        }
+
+        .text--medium {
+            font-size: 15pt;
+        }
+
+        .text--normal,
+        .text--body {
+            font-size: 15pt;
+        }
+
+        .text--bold {
+            font-weight: bold;
+        }
+
+
+        .addresee {
+            margin-top: 50px;
+            padding: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .message {
+            margin: 50px 0;
+            text-align: justify;
+        }
+
+        .tbl-products {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .tbl-totals {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td.col-ancha,
+        th.col-ancha {
+            width: 40%;
+            border: 1px solid black;
+            padding: 3px;
+        }
+
+        td.col-estrecha,
+        th.col-estrecha {
+            width: 20%;
+            border: 1px solid black;
+            text-align: center;
+            padding: 3px;
+        }
+
+        .col_uniq {
+            width: 60%;
+        }
+
+        .title {
+            font-weight: 700;
+        }
+
+        .title_italic {
+            font-style: italic;
+        }
+
+        .manager_signature {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            height: 130px;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .image_asignature {
+            height: 130px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .asignature__line {
+            background-color: black;
+            width: 300px;
+            height: 0.5px;
+        }
+
+        @media print {
+            /* .manager_signature{
+    margin-top: 80px !important;
+    border:1px solid orange;
+}*/
+
+            footer,
+            .footer {
+                position: fixed;
+                bottom: 0 !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="https://drive.google.com/thumbnail?id=1aO30S_ikuNQmPqoFEjq_XIPJdHUoWG46" alt="Logo" width="90"
+                height="110">
+        </div>
+        <div class="header__title">
+            <h1>Impulsora Avipecuaria</h1>
+        </div>
+        <img class="image_pio" src="https://drive.google.com/thumbnail?id=1OiAdfx_pK3-gC6rsqTzHT8hotc90C6ZK"
+            height="190px" alt="Gallinas" width="300px">
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <p class="date-info text--body">
+                &lt;&lt;[ID Venta].[Oficina].[Municipio]&gt;&gt;, &lt;&lt;[ID Venta].[Oficina].[Estado]&gt;&gt;,
+                &lt;&lt; text([ID Venta].[Fecha Venta], "DD 'de' MMMM 'de' YYYY") &gt;&gt;
+            </p>
+            <div class="addresee">
+                <p class="address__customer text--bold text--body text--bold"> &lt;&lt; [ID Venta].[ID Cliente].[Nombre
+                    del contacto] &gt;&gt; </p>
+                <p class="address__customer-department text--body"> Departamento de Compras</p>
+            </div>
+
+            <div class="message">
+                <p class="text--body">Apreciable &lt;&lt;[ID Venta].[ID Cliente].[Nombre del contacto]&gt;&gt;,
+                    esperando que se encuentre de maravilla, le hacemos llegar un afectuoso saludo y a su vez, la
+                    cotización del siguiente producto:</p>
+            </div>
+            <table class="tbl-products">
+                <thead>
+                    <tr>
+                        <th class="col-estrecha text--body">Cantidad</th>
+                        <th class="col-ancha text--body">Producto</th>
+                        <th class="col-estrecha text--body">Presentación</th>
+                        <th class="col-estrecha text--body">Precio 2025</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <p>&lt;&lt; Start: SELECT(DetallesVentas[ID Detalle],and([ID Venta]=[_Thisrow].[ID
+                        Venta],isnotblank([Producto]))) &gt;&gt;</p>
+                    <tr>
+                        <th class="col-estrecha text--body">&lt;&lt;[ID Detalle].[Cantidad]&gt;&gt;</th>
+                        <td class="col-ancha text--body"> &lt;&lt;[ID Detalle].[Producto].[Descripción] &gt;&gt;</td>
+                        <td class="col-estrecha title_italic text--body">&lt;&lt; [ID Detalle].[Producto].[Presentación]
+                            &gt;&gt;</td>
+                        <td class="col-estrecha text--body">&lt;&lt;text([ID Detalle].[Precio unitario])&gt;&gt; </td>
+                    </tr>
+                    <p> &lt;&lt; end &gt;&gt;</p>
+                </tbody>
+            </table>
+            <table class="tbl-totals">
+                <tr>
+                    <td class="text--body col_uniq" rowspan="4"></td>
+                    <td class="col-estrecha title_italic text--body">Subtotal</td>
+                    <th class="col-estrecha title_italic text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha text--body">IVA</td>
+                    <th class="col-estrecha text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha text--body">Flete</td>
+                    <th class="col-estrecha text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha title title_italic text--body">TOTAL</td>
+                    <th class="col-estrecha title text--body"></th>
+                </tr>
+            </table>
+            <div class="message">
+                <p class="text--body">
+                    Estos serán los precios vigentes todo el &lt;&lt;text(today(), "yyyy")&gt;&gt;. Como empresa,
+                    estamos comprometidos con ustedes para brindar un excelente servicio de calidad. Quedamos pendientes
+                    de su aprobación para cualquier detalle.
+                </p>
+            </div>
+            <p class="text--body">Atentamente.</p>
+            <div class="manager_signature">
+                <div class="image_asignature"> &lt;&lt; [ID Venta].[ID Vendedor].[Firma] &gt;&gt;</div>
+                <div class="asignature__line"></div>
+                <p class="text--body">&lt;&lt;[ID Venta].[Vendedor]&gt;&gt;</p>
+                <p class="text--body">&lt;&lt;[ID Venta].[ID Vendedor].[Puesto].[Nombre largo]&gt;&gt;</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="text--large text--bold mb-10">&lt;&lt;[ID Venta].[Oficina].[Municipio]&gt;&gt;</p>
+            <p class="text--medium">&lt;&lt;[ID Venta].[ID Vendedor].[Oficina].[Dirección]&gt;&gt; &lt;&lt; [ID
+                Venta].[ID Vendedor].[Correo electrónico] &gt;&gt;</p>
+            <p class="text--medium">Oficina: &lt;&lt; [ID Venta].[ID Vendedor].[Oficina].[Teléfono oficina] &gt;&gt;</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF Cotización</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Arial;
+}
+
+body {
+    display: grid;
+    grid-template-rows: minmax(0, 200px) 1fr minmax(0, 75px);
+    height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    width: 100%;
+    min-height: 150px;
+    background-color: #fcd62a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    max-width: 130px;
+}
+
+.header__title {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px 0px 25px 0px;
+}
+
+.header__title h1 {
+    font-size: 45pt;
+    font-weight: 300;
+}
+/*
+.image_pio{
+    border: 1px solid red;
+}*/
+
+/* MAIN */
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.container {
+    width: 1080px;
+    padding: 0px 100px;
+}
+
+.date-info {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    bottom: 0 !important;
+    width: 100%;
+   /* height: 100%;*/
+    padding: 12px 10px;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
+}
+
+.text {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.text--large {
+    font-size: 15pt;
+}
+
+.text--medium {
+    font-size: 15pt;
+}
+
+.text--normal,
+.text--body {
+    font-size: 15pt;
+}
+
+.text--bold {
+    font-weight: bold;
+}
+
+
+.addresee {
+    margin-top: 50px;
+    padding: 6px;    
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.message {
+    margin: 50px 0;
+    text-align: justify;
+}
+
+.tbl-products{
+    border-collapse: collapse;
+    width: 100%;
+    margin-top:50px;
+}
+
+.tbl-totals{
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom:30px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td.col-ancha, th.col-ancha {
+      width: 40%;
+      border: 1px solid black;
+      padding: 3px;
+    }
+
+td.col-estrecha, th.col-estrecha {
+    width: 20%;
+    border: 1px solid black;
+    text-align: center;  
+    padding: 3px;  
+}
+
+.col_uniq{
+    width:60%;
+}
+
+.title{
+    font-weight: 700;
+}
+
+.title_italic{
+    font-style: italic;
+}
+
+.manager_signature{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 130px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.image_asignature{
+    height: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.asignature__line {
+   background-color: black;
+    width: 300px;
+    height: 0.5px;
+}
+
+@media print {
+   /* .manager_signature{
+    
+    margin-top: 80px !important;
+    border:1px solid orange;
+}*/
+
+    footer,
+    .footer {
+        position: fixed;
+        bottom: 0 !important;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__logo">
+            <img src="https://drive.google.com/thumbnail?id=1aO30S_ikuNQmPqoFEjq_XIPJdHUoWG46"
+                alt="Logo" width="90" height="110">
+        </div>
+        <div class="header__title">
+            <h1>Impulsora Avipecuaria</h1>
+        </div>
+        <img class="image_pio"
+            src="https://drive.google.com/thumbnail?id=1OiAdfx_pK3-gC6rsqTzHT8hotc90C6ZK" height="190px"
+            alt="Gallinas" width="300px">
+    </header>
+
+    <main class="main">
+        <div class="container">
+
+            <p class="date-info text--body">
+                &lt;&lt;[ID Venta].[Oficina].[Municipio]&gt;&gt;, &lt;&lt;[ID Venta].[Oficina].[Estado]&gt;&gt;, &lt;&lt; text([ID Venta].[Fecha Venta], "DD 'de' MMMM 'de' YYYY") &gt;&gt;
+            </p>
+            <div class="addresee">
+                <p class="address__customer text--bold text--body text--bold"> &lt;&lt; [ID Venta].[ID Cliente].[Nombre del contacto] &gt;&gt; </p>
+                <p class="address__customer-department text--body"> Departamento de Compras</p>
+            </div>
+
+            <div class="message">
+                <p class="text--body">Apreciable &lt;&lt;[ID Venta].[ID Cliente].[Nombre del contacto]&gt;&gt;, esperando que se encuentre de maravilla, le hacemos llegar un afectuoso saludo y a su vez, la cotización del siguiente producto:</p>
+            </div>
+            <table class="tbl-products">
+                <thead>
+                    <tr>
+                        <th class="col-estrecha text--body">Cantidad</th>
+                        <th class="col-ancha text--body"> Producto</th>
+                        <th class="col-estrecha text--body">Presentación</th>
+                        <th class="col-estrecha text--body">Precio 2025</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <p><span> &lt;&lt; Start: SELECT(DetallesVentas[ID Detalle],and([ID Venta]=[_Thisrow].[ID Venta],isnotblank([Producto]))) &gt;&gt; </span></p>
+                    <tr>
+                        <th class="col-estrecha text--body">&lt;&lt;[ID Detalle].[Cantidad]&gt;&gt;</th>
+                        <td class="col-ancha text--body"> &lt;&lt;[ID Detalle].[Producto].[Descripción] &gt;&gt;</td>
+                        <td class="col-estrecha title_italic text--body">&lt;&lt; [ID Detalle].[Producto].[Presentación] &gt;&gt;</td>
+         <td class="col-estrecha text--body">&lt;&lt;[ID Detalle].[Precio unitario]&gt;&gt; </td>
+                    </tr>
+                    <p><span> &lt;&lt; end &gt;&gt;</span></p>
+                </tbody>
+            </table>
+            <table class="tbl-totals">
+                <tr>
+                    <td class="text--body col_uniq" rowspan="4"></td>
+                    <td class="col-estrecha title_italic text--body">Subtotal</td>
+                    <th class="col-estrecha title_italic text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha text--body">IVA</td>
+                    <th class="col-estrecha text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha text--body">Flete</td>
+                    <th class="col-estrecha text--body"></th>
+                </tr>
+                <tr>
+                    <td class="col-estrecha title title_italic text--body">TOTAL</td>
+                    <th class="col-estrecha title text--body"></th>
+                </tr>
+            </table>
+            <div class="message">
+                <p class="text--body">
+                    Estos serán los precios vigentes todo el &lt;&lt; text(today(), "yyyy") &gt;&gt; . Como empresa, estamos comprometidos con ustedes para brindar un excelente servicio de calidad. Quedamos pendientes de su aprobación para cualquier detalle.
+                </p>
+            </div>
+            <p class="text--body">Atentamente.</p>
+            <div class="manager_signature">
+                <div class="image_asignature"> &lt;&lt; [ID Venta].[ID Vendedor].[Firma] &gt;&gt;</div>
+                <div class="asignature__line"></div>
+                <p class="text--body">&lt;&lt;[ID Venta].[Vendedor]&gt;&gt;</p>
+                <p class="text--body">&lt;&lt;[ID Venta].[ID Vendedor].[Puesto].[Nombre largo]&gt;&gt;</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__content">
+            <p class="text--large text--bold mb-10">&lt;&lt;[ID Venta].[Oficina].[Municipio]&gt;&gt;</p>
+            <p class="text--medium">&lt;&lt;[ID Venta].[ID Vendedor].[Oficina].[Dirección]&gt;&gt; &lt;&lt; [ID Venta].[ID Vendedor].[Correo electrónico] &gt;&gt;</p>
+            <p class="text--medium">Oficina: &lt;&lt; [ID Venta].[ID Vendedor].[Oficina].[Teléfono oficina] &gt;&gt;</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
