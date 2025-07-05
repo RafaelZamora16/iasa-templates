@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>PDF cancelación backorders</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-size: 16px;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+
+        /*Estilos de letra*/
+        .text_bold {
+            font-weight: 700;
+        }
+
+        .space_text {
+            padding: 5px;
+        }
+
+        .text_center {
+            text-align: center;
+        }
+
+        .text_right {
+            text-align: end;
+        }
+
+        .p_margin {
+            margin-left: 10px;
+        }
+
+        /*Estilos de header*/
+        header {
+            width: 98%;
+            height: 30px;
+            margin: 20px 10px;
+            text-align: end;
+        }
+
+        .header_title {
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        /*Estilos de main*/
+
+        .main_header--content {
+            margin: 20px 10px;
+            display: flex;
+            width: 98%;
+            height: 150px;
+        }
+
+        .header_content--data {
+            margin: 0px 20px;
+        }
+
+        /*Estilos de tabla*/
+        table {
+            width: 98%;
+            border-collapse: collapse;
+            margin: 20px 10px;
+        }
+
+        td,
+        th {
+            padding: 2 5px;
+        }
+
+        .th_normal--column {
+            width: 150px;
+        }
+
+        .th_narrow--column {
+            width: 120px;
+        }
+    </style>
+</head>
+<header>
+    <h1 class="header_title">IMPULSORA AVIPECUARIA</h1>
+</header>
+
+<body>
+    <main>
+        <div class="main_header--content">
+            <img src="https://drive.google.com/thumbnail?id=1d2fHShnAWXguCrc2Dhca1_HL1Mu5hpFB" alt="">
+            <div class="header_content--data">
+                <p class="text_bold">Domicilio fiscal:</p>
+                <p class="space_text">Referencia</p>
+            </div>
+        </div>
+        <p><span class="text_bold p_margin">REPORTE DE BACKORDERS DEL(OS) PROVEEDOR(ES):</span> Referencia</p>
+        <P>Generados de Referencia</P>
+        <table>
+            <thead>
+                <tr>
+                    <th>Proveedor</th>
+                    <th>Producto</th>
+                    <th class="th_narrow--column">Cantidad</th>
+                    <th class="th_narrow--column">Fecha de generación</th>
+                    <th class="th_narrow--column">Folio orden de compra</th>
+                    <th class="th_normal--column">Folio requisición</th>
+                    <th class="th_normal--column">Precio pactado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="space_text">Referencia</td>
+                    <td class="space_text text_center">Referencia</td>
+                    <td class="space_text">Referencia</td>
+                    <td class="space_text">Referencia</td>
+                    <td class="space_text">Referencia</td>
+                    <td class="space_text text_right">Referencia</td>
+                    <td class="space_text">Referencia</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+<footer>
+
+</footer>
+
+</html>
